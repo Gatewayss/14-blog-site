@@ -1,13 +1,13 @@
 const { Model, DataTypes } = require('sequelize');
-
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection.js');
-const { Comment } = require('./index.js');
+// const { Comment } = require('./index.js');
 
 // username and hashed password.
 
 class User extends Model { }
 
-Comment.init({
+User.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,

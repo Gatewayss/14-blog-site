@@ -1,0 +1,14 @@
+[
+    {
+        "comment_text": "Great job!",
+        "user_id" : 2
+    },
+    {
+        "comment_text": "Amazing!!",
+        "user_id" : 1
+    },
+    {
+        "comment_text": "So cool!!",
+        "user_id" : 3
+    }
+]
