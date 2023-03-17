@@ -16,6 +16,10 @@ Post.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    blog_text: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     createdAt: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
