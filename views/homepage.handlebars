@@ -1,1 +1,12 @@
-<h1>THIS IS THE HOMEPAGE</h1>
+<h1>Featured Blogs</h1>
+<ul>
+    <a href="./login"><li>Login</li></a>
+    <a href="./signup"><li>Signup</li></a>
+</ul>
+{{#each posts as |post| }}
+<h2>{{post.post_title}}</h2>
+<p>{{post.blog_text}}</p>
+<p>By: {{user.name}}</p>
+<p>{{post.createdAt}}</p>
+
+{{/each}}
