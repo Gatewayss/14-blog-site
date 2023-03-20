@@ -1,3 +1,5 @@
+const form = document.getElementById('login-form')
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -7,12 +9,12 @@ const loginFormHandler = async (event) => {
   
     if (email && password) {
       // Send a POST request to the API endpoint
-      const response = await fetch('/login', {
+      const response = await fetch('api/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+
       if (response.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/dashboard');
@@ -21,3 +23,5 @@ const loginFormHandler = async (event) => {
       }
     }
   };
+
+  form.addEventListener('submit', loginFormHandler)
