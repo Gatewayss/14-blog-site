@@ -91,7 +91,7 @@ router.get('/posts/:id', async (req, res) => {
 
     const post = postData.get({ plain: true })
 
-    console.log(post);
+    //console.log(post);
 
     res.render('post',
       { post }
@@ -100,7 +100,5 @@ router.get('/posts/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
-
-
 
 module.exports = router;

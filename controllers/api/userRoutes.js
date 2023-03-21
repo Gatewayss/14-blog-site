@@ -59,4 +59,15 @@ router.post('/login', async (req, res) => {
     res.status(204).end();
   });
 
+  router.post('/posts/:id', async (req, res) => {
+    try {
+      const commentData = await Comment.create(req.body);
+      return res.status(201).json({
+        commentData,
+      });
+    } catch (error) {
+      return res.status(500).json({ error: error.message })
+    }
+  })
+  
   module.exports = router;
