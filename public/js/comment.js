@@ -6,7 +6,7 @@ const addComment = async (event) => {
     const comment = document.querySelector('#comment-input').value.trim();
     console.log(comment);
     if (comment) {
-        const response = await fetch('/api/users/posts/:id', {
+        const response = await fetch('/api/users/post/:id', {
             method: 'POST',
             body: JSON.stringify({ comment }),
             headers: { 'Content-Type': 'application/json' },

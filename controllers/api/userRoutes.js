@@ -59,9 +59,10 @@ router.post('/login', async (req, res) => {
     res.status(204).end();
   });
 
-  router.post('/posts/:id', async (req, res) => {
+  router.post('/post/:id', async (req, res) => {
     try {
       const commentData = await Comment.create(req.body);
+      console.log(commentData);
       return res.status(201).json({
         commentData,
       });
