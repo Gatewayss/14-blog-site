@@ -1,8 +1,12 @@
-<h1>Featured Blogs</h1>
+<h1>THIS IS THE HOMEPAGE</h1>
+
 <ul>
-    <a href="./login"><li>Login</li></a>
-    <a href="./signup"><li>Signup</li></a>
+    <li><a href="./homepage">Home</a></li>
+    <li><a href="./dashboard">Dashboard</a></li>
+    {{!-- <li><a href="./onboarding">Logout</a></li> --}}
+    <button class="no-button" id="logout">logout</button>
 </ul>
+
 {{#each posts as |post| }}
 <h2>{{post.post_title}}</h2>
 <p>{{post.blog_text}}</p>
@@ -10,3 +14,5 @@
 <p>{{post.createdAt}}</p>
 
 {{/each}}
+
+<script src="./js/logout.js"></script>
