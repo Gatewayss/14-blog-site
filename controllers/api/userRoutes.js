@@ -61,6 +61,8 @@ router.post('/logout', (req, res) => {
 
 router.post('/post/:id', async (req, res) => {
   try {
+    // const user_id = req.session.user_id
+    // console.log(user_id);
     const newComment = req.body
     const comment = await Comment.create(newComment);
     res.status(200).json(comment)

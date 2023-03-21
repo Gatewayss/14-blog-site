@@ -14,7 +14,7 @@ const addComment = async (event) => {
         });
 
         if (response.ok) {
-            response.render(`post/${post_id}`);
+            window.location.reload()
         } else {
             alert(response.statusText);
         }
