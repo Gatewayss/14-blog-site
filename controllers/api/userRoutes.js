@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const { User } = require('../../models');
+const { User, Comment } = require('../../models');
 
 router.post('/signup', async (req, res) => {
   try {
@@ -61,16 +61,10 @@ router.post('/logout', (req, res) => {
 
 router.post('/post/:id', async (req, res) => {
   try {
-    console.log(req.body);
-    const newComment = await Comment.create(req.body);
-
+    const newComment = req.body
     const comment = await Comment.create(newComment);
     res.status(200).json(comment)
-    
-    console.log(commentData);
-    return res.status(201).json({
-      commentData,
-    });
+    return res.status(201).json()
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
