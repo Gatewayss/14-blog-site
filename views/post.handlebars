@@ -1,0 +1,12 @@
+<h1>{{post.post_title}}</h1>
+<p>By: {{post.user.name}}</p>
+<p>{{post.createdAt}}</p>
+<p>{{post.blog_text}}</p>
+
+<hr />
+
+{{#each post.comments as |comment|}}
+<p>{{comment.createdAt}}</p>
+<p>{{user.name}}: {{comment.comment_text}}</p>
+<hr />
+{{/each}}

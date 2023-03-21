@@ -8,7 +8,7 @@
 </ul>
 
 {{#each posts as |post| }}
-<h2><a href="#">{{post.post_title}}</a></h2>
+<h2><a href="/posts/{{post.id}}">{{post.post_title}}</a></h2>
 <p>{{post.blog_text}}</p>
 <p>By: {{user.name}}</p>
 <p>{{post.createdAt}}</p>
