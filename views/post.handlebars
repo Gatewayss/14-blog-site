@@ -12,6 +12,8 @@
 {{/each}}
 
 <form id="comment-form">
+     <input type="hidden" id="post_id" value="{{post.id}}" name="post_id"/>
+     <input type="hidden" id="user_id" value="{{post.user_id}}" name="user_id"/>
 <textarea id="comment-input"></textarea>
 <button id="comment-button" type="submit">send</button>
 </form>
