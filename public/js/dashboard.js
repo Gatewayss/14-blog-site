@@ -1,4 +1,6 @@
 const postForm = document.getElementById('post-form')
+const deleteBtn = document.querySelector('.project-list')
+console.log(deleteBtn);
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -8,7 +10,7 @@ const newFormHandler = async (event) => {
     const blog_text = document.querySelector('#project-desc').value.trim();
   
     if (post_title && blog_text) {
-      const response = await fetch(`/api/posts`, {
+      const response = await fetch(`/api/post`, {
         method: 'POST',
         body: JSON.stringify({ post_title, blog_text}),
         headers: {
@@ -24,5 +26,22 @@ const newFormHandler = async (event) => {
     }
   };
 
+  const delButtonHandler = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/post/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to delete post');
+      }
+    }
+  };
+
+  deleteBtn.addEventListener('click', delButtonHandler)
   postForm.addEventListener('submit', newFormHandler)
  
