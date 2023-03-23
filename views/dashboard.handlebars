@@ -2,6 +2,47 @@
 <ul>
     <li><a href="./homepage">Home</a></li>
     <li><a href="./dashboard">Dashboard</a></li>
-    {{!-- <li><a href="./onboarding">Logout</a></li> --}}
     <button class="no-button" id="logout">logout</button>
 </ul>
+
+
+  <div>
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+
+
+  <div>
+    <h3>Create a New Project:</h3>
+
+    <form id="post-form">
+      <div>
+        <label for="project-name">project name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      
+      <div>
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+    <h3>Current Projects:</h3>
+
+    {{#each posts as |post|}}
+    
+      <div>
+        <h4><a href="/api/posts/{{post.id}}">{{post.post_title}}</a></h4>
+      </div>
+      <div>{{post.blog_text}}</div>
+      <div>
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+    
+    {{/each}}
+  
+
+<script src="./js/dashboard.js"></script>
