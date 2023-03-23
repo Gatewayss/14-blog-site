@@ -1,12 +1,5 @@
 <h1>THIS IS THE HOMEPAGE</h1>
 
-<ul>
-    <li><a href="./homepage">Home</a></li>
-    <li><a href="./dashboard">Dashboard</a></li>
-    {{!-- <li><a href="./onboarding">Logout</a></li> --}}
-    <button class="no-button" id="logout">logout</button>
-</ul>
-
 {{#each posts as |post| }}
 <h2><a href="/posts/{{post.id}}">{{post.post_title}}</a></h2>
 <p>{{post.blog_text}}</p>

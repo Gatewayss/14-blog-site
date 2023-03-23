@@ -1,4 +1,4 @@
-const form = document.getElementById('login-form')
+const form = document.getElementById('login-form');
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -23,4 +23,4 @@ const loginFormHandler = async (event) => {
     }
   };
 
-  form.addEventListener('submit', loginFormHandler)
+  form.addEventListener('submit', loginFormHandler);

@@ -1,4 +1,4 @@
-const postForm = document.getElementById('post-form')
+const postForm = document.getElementById('post-form');
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -25,5 +25,5 @@ const newFormHandler = async (event) => {
     }
   };
 
-  postForm.addEventListener('submit', newFormHandler)
+  postForm.addEventListener('submit', newFormHandler);
  

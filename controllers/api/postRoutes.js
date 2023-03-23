@@ -13,7 +13,7 @@ router.post('/post/:id', withAuth, async (req, res) => {
     } catch (error) {
       return res.status(500).json({ error: error.message })
     }
-  })
+  });
 
   router.post('/', withAuth, async (req, res) => {
     try {

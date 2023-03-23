@@ -1,4 +1,4 @@
-const commentForm = document.getElementById('comment-form')
+const commentForm = document.getElementById('comment-form');
 
 const addComment = async (event) => {
     event.preventDefault();
@@ -23,4 +23,4 @@ const addComment = async (event) => {
     }
 };
 
-commentForm.addEventListener('submit', addComment)
+commentForm.addEventListener('submit', addComment);

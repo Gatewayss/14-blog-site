@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../../models');
-const withAuth = require('../../utils/auth')
 
 router.post('/signup', async (req, res) => {
   try {
@@ -20,7 +19,6 @@ router.post('/signup', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 
 router.post('/login', async (req, res) => {
   try {

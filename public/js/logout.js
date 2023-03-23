@@ -1,4 +1,4 @@
-const logoutBtn = document.getElementById('logout')
+const logoutBtn = document.getElementById('logout');
 
 const logout = async () => {
     const response = await fetch('api/users/logout', {
