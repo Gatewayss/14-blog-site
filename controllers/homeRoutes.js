@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/posts/:id', withAuth, async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const { id } = req.params
 

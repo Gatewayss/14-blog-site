@@ -1,7 +1,7 @@
-<h1>{{post.post_title}}</h1>
+<input id="project-name" value="{{post.post_title}}"/>
 <p>By: {{post.user.name}}</p>
 <p>{{post.createdAt}}</p>
-<p>{{post.blog_text}}</p>
+<input id="project-desc" value="{{post.blog_text}}" />
 
 <hr />
 
@@ -10,6 +10,11 @@
 <p>{{user.name}}: {{comment.comment_text}}</p>
 <hr />
 {{/each}}
+
+<div class="col-md-6 project-list update-list">
+     <button data-update="{{post.id}}">UPDATE</button>
+     <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+</div>
 
 <form id="comment-form">
      <input type="hidden" id="post_id" value="{{post.id}}" name="post_id"/>
