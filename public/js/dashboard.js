@@ -1,4 +1,4 @@
-const postForm = document.getElementById('post-form');
+const postForm = document.getElementById('post-form')
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -18,12 +18,11 @@ const newFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/dashboard');
-        //window.location.reload()
       } else {
         alert('Failed to create project');
       }
     }
   };
 
-  postForm.addEventListener('submit', newFormHandler);
+  postForm.addEventListener('submit', newFormHandler)
  
