@@ -5,7 +5,7 @@ const addComment = async (event) => {
 
     const comment_text = document.querySelector('#comment-input').value.trim();
     const post_id = document.getElementById('post_id').value;
-    const user_id = document.getElementById('user_id').value
+    //const user_id = document.getElementById('user_id').value
     try {
         const response = await fetch(`/api/users/post/${post_id}`, {
             method: 'POST',

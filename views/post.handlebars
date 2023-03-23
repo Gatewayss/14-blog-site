@@ -14,9 +14,11 @@
 <form id="comment-form">
      <input type="hidden" id="post_id" value="{{post.id}}" name="post_id"/>
      {{!-- change this so its the correct user/ auth system --}}
-     <input type="hidden" id="user_id" value="{{post.user_id}}" name="user_id"/>
+     <input type="hidden" id="user_id" value="{{comment.user_id}} name="user_id"/>
 <textarea id="comment-input"></textarea>
 <button id="comment-button" type="submit">send</button>
 </form>
 
 <script src="/js/comment.js"></script>
+
+{{!-- value="{{post.user_id}} --}}
