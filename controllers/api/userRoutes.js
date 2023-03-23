@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const { User, Comment } = require('../../models');
+const { User } = require('../../models');
 const withAuth = require('../../utils/auth')
 
 router.post('/signup', async (req, res) => {
@@ -59,24 +59,5 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.post('/post/:id', withAuth, async (req, res) => {
-  try {
-    // const user_id = req.session.user_id
-    // console.log(user_id);
-    // let newComment = req.body
-    // newComment.user_id
-    // let test = newComment.user_id
-    // console.log(test, "----------------------------");
-    const comment = await Comment.create({
-      ...req.body, 
-      user_id: req.session.user_id
-    });
-    // console.log(comment, '----------------');
-    res.status(200).json(comment)
-    return res.status(201).json()
-  } catch (error) {
-    return res.status(500).json({ error: error.message })
-  }
-})
 
 module.exports = router;
