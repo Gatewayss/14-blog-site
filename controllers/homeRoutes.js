@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -63,14 +64,13 @@ router.get('/homepage', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  //res.render('homepage');
 });
 
 router.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
 
-router.get('/posts/:id', async (req, res) => {
+router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const { id } = req.params
 
