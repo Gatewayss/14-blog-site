@@ -1,12 +1,29 @@
 [
     {
-        "post_title": "LALA",
-        "blog_text": "lorum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf sdasdaskdhfs kjh",
+        "post_title": "The Art of Procrastination: How to Waste Time Like a Pro",
+        "blog_text": "Without Actually Accomplishing Anything!! Porum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf sdasdaskdhfs kjh",
         "user_id": 2
     }, 
     {
-        "post_title": "blahblah",
-        "blog_text": "sdasdum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf skdhfs kjh",
+        "post_title": "Why Cats are Better than People",
+        "blog_text": "and Other Unpopular Opinions... Jdasdum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf skdhfs kjh",
+        "user_id": 3
+    },
+    {
+        "post_title": "The Ultimate Guide to Being Average",
+        "blog_text": "How to Blend in Perfectly with the Crowd! Ddasdum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf skdhfs kjh",
         "user_id": 1
+    },
+    {
+        "post_title": "How to Be Lazy and Still Get Things Done",
+        "blog_text": "A Procrastinator's Guide to Productivity. Sdasdum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf skdhfs kjh",
+        "user_id": 3
+    },
+    {
+        "post_title": "How to Survive a Family Gathering",
+        "blog_text": "A Guide for Introverts and Socially Awkward People. Sdasdum adadfdsfdsfsdfks sdf sdfsjfs  sdfjsdkfhsd sdfhjsdkfh dsfksdhfsdk fjh sdf skdhfs kjh",
+        "user_id": 2
     }
+
+
 ]
