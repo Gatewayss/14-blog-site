@@ -1,8 +1,16 @@
-<input id="project-name" value="{{post.post_title}}"/>
-<p>By: {{post.user.name}}</p>
-<p>{{post.createdAt}}</p>
-<input id="project-desc" value="{{post.blog_text}}" />
 
+
+{{#ifEquals post.user_id user_id}}
+  <input id="project-name" value="{{post.post_title}}"/>
+  <p>By: {{post.user.name}}</p>
+  <p>{{post.createdAt}}</p>
+  <input id="project-desc" value="{{post.blog_text}}" />
+{{else}}
+  <p id="project-name">{{post.post_title}}</p> 
+  <p>By: {{post.user.name}}</p>
+  <p>{{post.createdAt}}</p>
+  <p id="project-desc">{{post.blog_text}}</p>
+{{/ifEquals}}
 <hr />
 
 {{#each post.comments as |comment|}}
@@ -11,9 +19,11 @@
 <hr />
 {{/each}}
 
-<div class="col-md-6 project-list update-list">
+<div class="project-list update-list">
+     {{#ifEquals post.user_id user_id}}
      <button data-update="{{post.id}}">UPDATE</button>
      <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+     {{/ifEquals}}
 </div>
 
 <form id="comment-form">
@@ -24,5 +34,3 @@
 </form>
 
 <script src="/js/comment.js"></script>
-
-{{!-- value="{{post.user_id}} --}}

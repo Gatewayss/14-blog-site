@@ -1,7 +1,4 @@
-module.exports = {
-    format_date: (date) => {
-      // Format date as MM/DD/YYYY
-      return date.toLocaleDateString();
-    },
-};
+const Handlebars = require('handlebars');
+const ifEquals = require('./hbHelper.js');
 
+Handlebars.registerHelper('ifEquals', ifEquals);
