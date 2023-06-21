@@ -12,14 +12,19 @@
 <body>
 
 {{#if logged_in}}
-<ul>
-    <li><a href="/homepage">Home</a></li>
-    <li><a href="/dashboard">Dashboard</a></li>
-    <button id="logout">logout</button>
-</ul>
+<header>
+      <nav>
+        <ul>
+          <li data-active="true" class="links"><a href="/homepage">Home</a></li>
+          <li data-active="false" class="links"><a href="/dashboard">Post</a></li>
+          <li data-active="false" class="links"><a id="logout">logout</a></li>
+        </ul>
+      </nav>
+    </header>
 {{/if}}
 
     {{{body}}}
 
+<script src="./js/main.js"></script>
 </body>
 </html>

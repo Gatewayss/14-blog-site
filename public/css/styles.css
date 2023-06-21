@@ -1,8 +1,63 @@
-html,body { 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { 
 	height: 100%; 
 }
 
-.global-container{
+body {
+	height: 100%; 
+}
+
+/* navbar styles */
+
+header {
+	display: flex;
+	justify-content: center;
+	padding-block: 1rem;
+	background-color: #0d6efd !important;
+  }
+
+nav {
+  min-width: 28rem;
+  background: white;
+  color: #0e0e0e;
+  border-radius: 100vw;
+  height: 4.2em;
+}
+
+nav ul {
+  padding: 1.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+}
+
+nav ul li a {
+  color: #0e0e0e;
+  text-decoration: none;
+  padding: 1.5rem;
+  font-weight: 700;
+}
+
+.links:hover {
+	color: royalblue;
+	opacity: 0.8; 
+	transition: box-shadow 0.2s ease-in-out;
+	box-shadow: 0 0.2rem 0 0 royalblue;
+}
+
+/* sign in, sign up and onboarding styles */
+
+.global-container {
 	height:100%;
 	display: flex;
 	align-items: center;
@@ -10,32 +65,27 @@ html,body {
 	background-color: #f5f5f5;
 }
 
-form{
+form {
 	padding-top: 10px;
 	font-size: 14px;
 	margin-top: 30px;
 }
 
-.card-title{ font-weight:300; }
+.card-title { 
+	font-weight:300; 
+}
 
-.btn{
+.btn {
 	font-size: 14px;
 	margin-top:20px;
 }
 
-
-.login-form{ 
+.login-form { 
 	width:330px;
 	margin:20px;
 }
 
-.sign-up{
+.sign-up {
 	text-align:center;
 	padding:20px 0 0;
-}
-
-.alert{
-	margin-bottom:-30px;
-	font-size: 13px;
-	margin-top:20px;
 }
