@@ -17,7 +17,11 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/homepage');
       } else {
-        alert(response.statusText);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong! Please try again.',
+        })
       }
     }
   };
