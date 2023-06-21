@@ -18,7 +18,11 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/homepage');
       } else {
-        alert(response.statusText);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong! Incorrect username or password.',
+        })
       }
     }
   };

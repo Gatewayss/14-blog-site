@@ -1,4 +1,4 @@
-<h2>Login</h2>
+{{!-- <h2>Login</h2>
 
     <form id="login-form">
       <div>
@@ -14,5 +14,31 @@
       </div>
     </form>
 
-  <script src="./js/login.js"></script>
-  
+  <script src="./js/login.js"></script> --}}
+
+<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center">Log in to myBlog</h3>
+		<div class="card-text">
+			<form id="login-form">
+				<div class="form-group" >
+					<label for="exampleInputEmail1">Email address</label>
+					<input id="email-login" type="email" class="form-control form-control-sm" aria-describedby="emailHelp">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input id="password-login" type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+				
+				<div class="sign-up">
+					Don't have an account? <a href="/signup">Create One</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+ <script src="./js/login.js"></script>
