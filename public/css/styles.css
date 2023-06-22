@@ -27,6 +27,17 @@ body {
 	text-decoration: none;
 }
 
+.update-list button {
+	margin-right: 10px;
+}
+
+#project-desc {
+	height: auto;
+    min-height: 100px; 
+    max-height: 300px; 
+    overflow-y: auto; 
+}
+
 /* navbar styles */
 
 header {

@@ -1,37 +1,39 @@
+<div class="container">
+    {{#ifEquals post.user_id user_id}}
+    <label class="mt-3">Title:</label>
+    <input id="project-name" class="form-control mt-2" value="{{post.post_title}}" />
+    <label class="mt-3">Text:</label>
+    <textarea id="project-desc" class="form-control mt-2" value="{{post.blog_text}}">{{post.blog_text}}</textarea>
+    <p class="mt-2">By: {{post.user.name}}</p>
+    <p>Posted at: {{post.createdAt}}</p>
+    {{else}}
+    <p id="project-name">{{post.post_title}}</p>
+    <p>By: {{post.user.name}}</p>
+    <p>{{post.createdAt}}</p>
+    <p id="project-desc">{{post.blog_text}}</p>
+    {{/ifEquals}}
+    <hr />
 
+    {{#each post.comments as |comment|}}
+    <p>{{comment.createdAt}}</p>
+    <p>{{user.name}}: {{comment.comment_text}}</p>
+    <hr />
+    {{/each}}
 
-{{#ifEquals post.user_id user_id}}
-  <input id="project-name" value="{{post.post_title}}"/>
-  <p>By: {{post.user.name}}</p>
-  <p>{{post.createdAt}}</p>
-  <input id="project-desc" value="{{post.blog_text}}" />
-{{else}}
-  <p id="project-name">{{post.post_title}}</p> 
-  <p>By: {{post.user.name}}</p>
-  <p>{{post.createdAt}}</p>
-  <p id="project-desc">{{post.blog_text}}</p>
-{{/ifEquals}}
-<hr />
+    <div class="project-list update-list">
+      {{#ifEquals post.user_id user_id}}
+      <button class="btn btn-sm btn-primary" data-update="{{post.id}}">UPDATE</button>
+      <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      {{/ifEquals}}
+    </div>
 
-{{#each post.comments as |comment|}}
-<p>{{comment.createdAt}}</p>
-<p>{{user.name}}: {{comment.comment_text}}</p>
-<hr />
-{{/each}}
-
-<div class="project-list update-list">
-     {{#ifEquals post.user_id user_id}}
-     <button data-update="{{post.id}}">UPDATE</button>
-     <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-     {{/ifEquals}}
-</div>
-
-<form id="comment-form">
-     <input type="hidden" id="post_id" value="{{post.id}}" name="post_id"/>
-     <input type="hidden" id="user_id" value="{{comment.user_id}}" name="user_id"/>
-<textarea id="comment-input"></textarea>
-<button id="comment-button" type="submit">send</button>
-</form>
+    <form id="comment-form" class="mt-4">
+      <input type="hidden" id="post_id" value="{{post.id}}" name="post_id" />
+      <input type="hidden" id="user_id" value="{{comment.user_id}}" name="user_id" />
+      <textarea id="comment-input" class="form-control" placeholder="Enter comment here..."></textarea>
+      <button id="comment-button" type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+    </form>
+  </div>
 
 <script src="./js/logout.js"></script>
 <script src="/js/comment.js"></script>
