@@ -1,35 +1,44 @@
-<h1>this is the dashboard page</h1>
-
-  <div>
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-
-<div>
-  <div>
-      <h3>Create a New Project:</h3>
-
-      <form id="post-form">
-        <div>
-          <label for="project-name">project name:</label>
-          <input class="form-input" type="text" id="project-name" name="project-name" />
-        </div>
-        
-        <div>
-          <label for="project-desc">description:</label>
-          <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-primary">Create</button>
-        </div>
-      </form>
+<div class="container">
+    <div class="mt-5">
+      <h2>Welcome, {{name}}!</h2>
     </div>
 
-    <h3>Current posts:</h3>
+    <div class="mt-4">
+      <div>
+        <h3>Create a New Post:</h3>
 
-    {{#each posts as |post|}}
-        <h4><a href="/post/{{post.id}}">{{post.post_title}}</a></h4>
-        <p>{{post.blog_text}}</p>
+        <form id="post-form">
+          <div class="form-group">
+            <label for="project-name">Project Name:</label>
+            <input class="form-control" type="text" id="project-name" name="project-name" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="project-desc">Description:</label>
+            <textarea class="form-control" id="project-desc" name="project-desc"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="mt-5 text-center">Current posts:</h1>
+
+    {{#each posts as |post| }}
+    <div class="card post-card mt-4">
+      <div class="card-body">
+        <h2 class="card-title"><a href="/post/{{post.id}}">{{post.post_title}}</a></h2>
+        <p class="card-text">{{post.blog_text}}</p>
+        <p class="card-text">{{post.createdAt}}</p>
+      </div>
+    </div>
     {{/each}}
+  </div>
   
 <script src="./js/logout.js"></script>
 <script src="./js/dashboard.js"></script>
