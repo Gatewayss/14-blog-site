@@ -1,6 +1,4 @@
 const postForm = document.getElementById('post-form')
-// const deleteBtn = document.querySelector('.project-list')
-// const updateBtn = document.querySelector('.update-list')
 
 const newFormHandler = async (event) => {
     event.preventDefault();
