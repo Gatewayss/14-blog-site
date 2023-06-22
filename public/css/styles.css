@@ -15,6 +15,16 @@ html {
 
 body {
 	height: 100%; 
+	background-color: #f5f5f5;
+}
+
+.post-card:hover {
+	transition: transform 0.3s ease-in-out;
+	transform: scale(1.05);
+  }
+
+.post-card a {
+	text-decoration: none;
 }
 
 /* navbar styles */
