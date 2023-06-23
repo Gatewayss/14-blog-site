@@ -25,6 +25,8 @@ Finally, start the server
 `npm run start`
 
 once the server is started you will then be able to login and begin using the application. 
+
+![myBlog login page](public/css/assets/imgs/login.png)
 ## Technologies Used 
 
 This application runs on:
