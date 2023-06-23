@@ -1,7 +1,8 @@
 # myBlog
 
-This is a CMS-style blog site that allows users to create, read, update and delete blog posts. It also allows users to add comments to existing blog posts. While also having the ability to authenticate the users that are logged in. 
+This is a CMS-style blog site that allows users to create, read, update and delete blog posts. It also allows users to add comments to existing blog posts. While also having the ability to authenticate the users that are logged in.
 
+![myBlog demo](public/css/assets/gif/Blog.gif)
 ## Usage 
 To instal the necessary dependencies run the following command: 
 
@@ -21,7 +22,7 @@ After creating the database, exit the MySQL shell and add seeds by running the f
 
 Finally, start the server
 
-`npm start`
+`npm run start`
 
 once the server is started you will then be able to login and begin using the application. 
 ## Technologies Used 
