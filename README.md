@@ -1,4 +1,4 @@
-# CMS-Style Blog Site
+# myBlog
 
 This is a CMS-style blog site that allows users to create, read, update and delete blog posts. It also allows users to add comments to existing blog posts. While also having the ability to authenticate the users that are logged in. 
 
