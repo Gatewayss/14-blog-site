@@ -1,4 +1,4 @@
-# myBlog
+# myBlog [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a CMS-style blog site that allows users to create, read, update and delete blog posts. It also allows users to add comments to existing blog posts. While also having the ability to authenticate the users that are logged in.
 
