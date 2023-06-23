@@ -7,16 +7,19 @@
     <p class="mt-2">By: {{post.user.name}}</p>
     <p>Posted at: {{post.createdAt}}</p>
     {{else}}
-    <p id="project-name">{{post.post_title}}</p>
-    <p>By: {{post.user.name}}</p>
-    <p>{{post.createdAt}}</p>
-    <p id="project-desc">{{post.blog_text}}</p>
+    
+    <p class="p-2 mt-3" id="project-name">{{post.post_title}}</p>
+<p id="project-desc" class="p-2">{{post.blog_text}}</p>
+<p class="p-2 mb-1">By: {{post.user.name}}</p>
+<p class="p-2 mb-1">{{post.createdAt}}</p>
+
+
     {{/ifEquals}}
     <hr />
 
     {{#each post.comments as |comment|}}
-    <p>{{comment.createdAt}}</p>
-    <p>{{user.name}}: {{comment.comment_text}}</p>
+    <p class="p-2 mb-1">{{comment.createdAt}}</class=>
+    <p class="p-2 mb-1">{{user.name}}: {{comment.comment_text}}</p>
     <hr />
     {{/each}}
 
@@ -28,11 +31,12 @@
     </div>
 
     <form id="comment-form" class="mt-4">
-      <input type="hidden" id="post_id" value="{{post.id}}" name="post_id" />
+      <input class="p-2 mb-1" type="hidden" id="post_id" value="{{post.id}}" name="post_id" />
       <input type="hidden" id="user_id" value="{{comment.user_id}}" name="user_id" />
       <textarea id="comment-input" class="form-control" placeholder="Enter comment here..."></textarea>
-      <button id="comment-button" type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+      <button id="comment-button" type="submit" class="btn btn-primary mt-3 mb-5 ml-2">Submit</button>
     </form>
+  </div>
   </div>
 
 <script src="./js/logout.js"></script>
