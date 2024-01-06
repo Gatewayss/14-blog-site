@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const { id } = req.params
     const loggedInUserId = req.session.logged_in ? req.session.user_id : null;
@@ -32,7 +32,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
     })
 
     const post = postData.get({ plain: true })
-    
+
     res.render('post',
       {
         post,
@@ -45,24 +45,24 @@ router.get('/post/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/homepage');
-    return;
-  }
-  res.render('login');
-});
+// router.get('/login', (req, res) => {
+//   // If the user is already logged in, redirect the request to another route
+//   if (req.session.logged_in) {
+//     res.redirect('/homepage');
+//     return;
+//   }
+//   res.render('login');
+// });
 
-router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/homepage');
-    return;
-  }
-  res.render('signup')
-})
+// router.get('/signup', (req, res) => {
+//   if (req.session.logged_in) {
+//     res.redirect('/homepage');
+//     return;
+//   }
+//   res.render('signup')
+// })
 
-router.get('/homepage', withAuth, async (req, res) => {
+router.get('/homepage', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const postData = await Post.findAll({
@@ -88,7 +88,7 @@ router.get('/homepage', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
