@@ -69,7 +69,7 @@ router.post('/:id', withAuth, async (req, res) => {
       });
       console.log(newPost);
   
-      res.status(200).json(newPost);
+      res.status(201).json(newPost);
     } catch (err) {
       res.status(400).json(err);
     }
