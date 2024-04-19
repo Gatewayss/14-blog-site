@@ -17,11 +17,11 @@
     {{/ifEquals}} 
     <hr />
 
-    {{!-- {{#each post.comments as |comment|}}
+    {{#each post.comments as |comment|}}
     <p class="p-2 mb-1">{{comment.createdAt}}</class=>
     <p class="p-2 mb-1">{{user.name}}: {{comment.comment_text}}</p>
     <hr />
-    {{/each}}  --}}
+    {{/each}} 
 
     <div class="project-list update-list">
       {{#ifEquals post.user_id user_id}}
@@ -30,14 +30,14 @@
       {{/ifEquals}} 
     </div>
 
-    {{!-- <form id="comment-form" class="mt-4">
+    <form id="comment-form" class="mt-4">
       <input class="p-2 mb-1" type="hidden" id="post_id" value="{{post.id}}" name="post_id" />
       <input type="hidden" id="user_id" value="{{comment.user_id}}" name="user_id" />
       <textarea id="comment-input" class="form-control" placeholder="Enter comment here..."></textarea>
       <button id="comment-button" type="submit" class="btn btn-primary mt-3 mb-5 ml-2">Submit</button>
-    </form> --}}
+    </form>
   </div> 
   </div>
 
-{{!-- <script src="./js/logout.js"></script> --}}
-{{!-- <script src="/js/comment.js"></script> --}}
+<script src="./js/logout.js"></script>
+<script src="/js/comment.js"></script> 
